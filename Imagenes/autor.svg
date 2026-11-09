@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t d" font-family="Arial, sans-serif"><title id="t">Foto del creador (marcador)</title><desc id="d">Silueta que marca el lugar de la foto del creador del sitio.</desc><defs>
+<linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00bfff"/><stop offset="1" stop-color="#9333ea"/></linearGradient>
+<linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#00bfff"/></linearGradient>
+</defs><rect width="400" height="400" fill="#212740"/><circle cx="200" cy="200" r="190" fill="url(#g)" opacity=".25"/><circle cx="200" cy="155" r="68" fill="#93c5fd"/><path d="M60 400c0-86 62-140 140-140s140 54 140 140z" fill="#3b82f6"/><text x="200" y="385" text-anchor="middle" font-size="22" font-weight="bold" fill="#fff">Tu foto aquí</text></svg>

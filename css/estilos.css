@@ -1,0 +1,929 @@
+/* =========================================================
+   CloudComputing - Hoja de estilos (autoría propia)
+   Índice: 1 Variables · 2 Base · 3 Cabecera y navegación ·
+   4 Héroes · 5 Secciones · 6 Componentes · 7 Herramientas
+   interactivas · 8 Pie de página · 9 Responsive
+   ========================================================= */
+
+/* ===== 1. Variables (tema oscuro por defecto) ===== */
+
+:root {
+    --fondo: #191e33;
+    --fondo-2: #131728;
+    --superficie: #212740;
+    --superficie-2: #1a1c29;
+    --borde: #2d3558;
+    --texto: #ffffff;
+    --texto-2: #d1d5db;
+    --texto-3: #b0b8c6;
+    --acento: #00bfff;
+    --acento-2: #9333ea;
+    --azul: #3b82f6;
+    --sobre-acento: #0b1020;
+    --ok: #10b981;
+    --error: #f87171;
+    --aviso: #fbbf24;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --degradado-titulo: linear-gradient(135deg, #00bfff, #9333ea, #3b82f6);
+    --boton: linear-gradient(135deg, #2563eb, #9333ea);
+    color-scheme: dark;
+}
+
+/* ===== 2. Base ===== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img { max-width: 100%; height: auto; }
+
+a { color: var(--acento); }
+
+h1, h2, h3, h4 { line-height: 1.2; }
+
+:focus-visible {
+    outline: 3px solid var(--acento);
+    outline-offset: 3px;
+}
+
+.SaltarContenido {
+    position: absolute;
+    left: 16px;
+    top: -70px;
+    z-index: 3000;
+    background: var(--acento);
+    color: var(--sobre-acento);
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+
+.SaltarContenido:focus { top: 12px; }
+
+/* ===== 3. Cabecera y navegación ===== */
+
+.Cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--superficie-2);
+    box-shadow: var(--sombra);
+    border-bottom: 1px solid var(--borde);
+}
+
+.CabeceraTop {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 32px;
+}
+
+.Marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--texto);
+}
+
+#CloudLogo {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+}
+
+.NombreMarca {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.texto-celeste { color: var(--acento); }
+
+.NavPrincipal {
+    border-top: 1px solid var(--borde);
+    background: var(--fondo-2);
+}
+
+.ListaNav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 32px;
+    list-style: none;
+}
+
+.NavH3 {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    color: var(--texto);
+    font-size: 15px;
+    font-weight: 500;
+    border: 1.5px solid var(--borde);
+    border-radius: 8px;
+    padding: 7px 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.NavH3:hover {
+    background-color: var(--acento);
+    color: var(--sobre-acento);
+    border-color: var(--acento);
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.35);
+}
+
+.NavH3.Activo {
+    background-color: var(--acento);
+    color: var(--sobre-acento);
+    border-color: var(--acento);
+    font-weight: bold;
+}
+
+.Migas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 32px 0 32px;
+    font-size: 14px;
+    color: var(--texto-3);
+}
+
+.Migas ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.Migas li + li::before { content: "›"; margin-right: 6px; }
+
+.Migas a { color: var(--acento); }
+
+.Migas [aria-current] { color: var(--texto); font-weight: bold; }
+
+/* ===== 4. Héroes ===== */
+
+.CloudContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px 60px 20px;
+}
+
+.H1CloudComputing {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(34px, 7vw, 76px);
+    line-height: 1.1;
+    font-weight: bold;
+    color: var(--texto);
+    margin: 0 0 20px 0;
+}
+
+.texto-multicolor {
+    background: var(--degradado-titulo);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    padding-bottom: 6px;
+}
+
+.Parrafo_Inicio {
+    font-size: clamp(16px, 2.2vw, 20px);
+    color: var(--texto-2);
+    margin: 4px 0 30px 0;
+    max-width: 850px;
+    line-height: 1.6;
+}
+
+.ImagenHero {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 191, 255, 0.18);
+    animation: flotar 6s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.GrupoBotones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.BotonHero,
+.BotonSecundario {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 13px 26px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.BotonHero {
+    color: #ffffff;
+    background: var(--boton);
+    border: 2px solid transparent;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+}
+
+.BotonSecundario {
+    color: var(--texto);
+    background: transparent;
+    border: 2px solid var(--acento);
+}
+
+.BotonHero:hover,
+.BotonSecundario:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(59, 130, 246, 0.45); }
+
+.HeroPagina {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 32px 20px 32px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.HeroPagina h1 {
+    font-size: clamp(30px, 5vw, 52px);
+    margin: 6px 0 16px 0;
+}
+
+.HeroPagina .Lead {
+    font-size: clamp(16px, 2vw, 19px);
+    color: var(--texto-2);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.Etiqueta {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--acento);
+}
+
+.HeroPagina img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--borde);
+    box-shadow: 0 10px 40px rgba(0, 191, 255, 0.12);
+}
+
+.Indice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.Indice a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--texto);
+    border: 1.5px solid var(--borde);
+    border-radius: 20px;
+    padding: 6px 14px;
+    transition: all 0.3s ease;
+}
+
+.Indice a:hover { background: var(--acento); color: var(--sobre-acento); border-color: var(--acento); }
+
+/* ===== 5. Secciones ===== */
+
+.SeccionContenedor {
+    padding: 70px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    scroll-margin-top: 150px;
+}
+
+.SeccionOscura {
+    background-color: var(--fondo-2);
+    border-radius: 16px;
+}
+
+.TituloSeccion {
+    font-size: clamp(26px, 4vw, 36px);
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: var(--texto);
+}
+
+.DescripcionSeccion {
+    font-size: 18px;
+    text-align: center;
+    color: var(--texto-2);
+    max-width: 780px;
+    margin: 0 auto 40px auto;
+    line-height: 1.65;
+}
+
+.Figura { margin: 10px auto 45px auto; max-width: 580px; text-align: center; }
+
+.Figura img { display: block; width: 100%; border-radius: 16px; border: 1px solid var(--borde); }
+
+.Figura figcaption { margin-top: 12px; font-size: 14px; color: var(--texto-3); }
+
+.Prosa {
+    max-width: 820px;
+    margin: 0 auto 30px auto;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--texto-2);
+}
+
+.Prosa strong { color: var(--texto); }
+
+/* ===== 6. Componentes ===== */
+
+.GridTarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.Tarjeta {
+    background-color: var(--superficie);
+    padding: 28px 22px;
+    border-radius: 12px;
+    border: 1px solid var(--borde);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.IndicadorTarjeta {
+    width: 35px;
+    height: 4px;
+    background-color: var(--acento);
+    border-radius: 2px;
+    margin-bottom: 18px;
+}
+
+.Tarjeta h3 { margin: 0 0 10px 0; font-size: 20px; color: var(--texto); }
+
+.Tarjeta p { font-size: 15px; color: var(--texto-3); line-height: 1.55; margin: 0; }
+
+/* Tarjetas que son enlaces (ruta de aprendizaje) */
+
+a.TarjetaEnlace {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.TarjetaEnlace .Numero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--boton);
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.TarjetaEnlace .Mas { display: inline-block; margin-top: 14px; color: var(--acento); font-weight: bold; font-size: 14px; }
+
+.TarjetaEnlace:hover .Mas { text-decoration: underline; }
+
+.GridServicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.TarjetaServicio {
+    background-color: var(--superficie-2);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 35px 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.TarjetaServicio.Destacada {
+    border-color: var(--acento-2);
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.2);
+}
+
+.Badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--azul);
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.TarjetaServicio.Destacada .Badge { background-color: var(--acento-2); }
+
+.TarjetaServicio h3 { font-size: 32px; margin: 0; color: var(--acento); }
+
+.TarjetaServicio h4 { font-size: 16px; color: var(--texto-2); margin: 5px 0 20px 0; font-weight: normal; }
+
+.TarjetaServicio p { font-size: 15px; color: var(--texto-2); line-height: 1.6; }
+
+.ListaDetalles {
+    list-style: none;
+    padding: 0;
+    margin-top: auto;
+    font-size: 14px;
+    color: var(--texto-3);
+}
+
+.ListaDetalles li { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--borde); }
+
+.GridDespliegue {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.TarjetaDespliegue {
+    background: var(--superficie);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--borde);
+    border-left: 4px solid var(--acento);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.TarjetaDespliegue h3 { margin-top: 0; font-size: 20px; color: var(--texto); }
+
+.TarjetaDespliegue p { font-size: 15px; color: var(--texto-3); line-height: 1.55; margin-bottom: 0; }
+
+.TarjetaDespliegue ul { padding-left: 20px; margin: 10px 0 0 0; color: var(--texto-3); font-size: 14px; line-height: 1.6; }
+
+.AlineacionTarjeta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.Tarjeta:hover,
+.TarjetaServicio:hover,
+.TarjetaDespliegue:hover { transform: translateY(-5px); border-color: var(--acento); }
+
+.Etiquetas { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+
+.Chip {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 14px;
+    background: var(--fondo);
+    color: var(--acento);
+    border: 1px solid var(--borde);
+}
+
+/* Estadísticas */
+
+.GridCifras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 32px;
+}
+
+.Cifra {
+    text-align: center;
+    padding: 22px 10px;
+    border-radius: 12px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+}
+
+.Cifra strong {
+    display: block;
+    font-size: 44px;
+    background: var(--degradado-titulo);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    line-height: 1.2;
+}
+
+.Cifra span { font-size: 14px; color: var(--texto-3); }
+
+/* Tablas */
+
+.TablaWrap {
+    overflow-x: auto;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+table.Tabla { width: 100%; border-collapse: collapse; min-width: 640px; background: var(--superficie); }
+
+.Tabla caption { text-align: left; padding: 12px 16px; font-weight: bold; color: var(--texto-2); caption-side: top; }
+
+.Tabla th, .Tabla td { padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--borde); font-size: 15px; vertical-align: top; }
+
+.Tabla thead th { background: var(--fondo-2); color: var(--acento); }
+
+.Tabla tbody th { color: var(--texto); background: var(--superficie); }
+
+.Tabla td { color: var(--texto-2); }
+
+.Tabla tbody tr:hover td, .Tabla tbody tr:hover th { background: var(--fondo-2); }
+
+.Tabla tr:last-child th, .Tabla tr:last-child td { border-bottom: none; }
+
+/* Línea de tiempo */
+
+.LineaTiempo { list-style: none; margin: 0 auto; padding: 0 0 0 28px; max-width: 760px; border-left: 3px solid var(--borde); }
+
+.LineaTiempo li { position: relative; margin-bottom: 28px; padding-left: 20px; }
+
+.LineaTiempo li::before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--acento);
+    border: 3px solid var(--fondo);
+}
+
+.LineaTiempo .Anio { font-weight: bold; color: var(--acento); font-size: 20px; }
+
+.LineaTiempo h3 { margin: 2px 0 6px 0; font-size: 18px; }
+
+.LineaTiempo p { margin: 0; color: var(--texto-3); font-size: 15px; line-height: 1.6; }
+
+/* Pros y contras */
+
+.DosColumnas { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+.Columna { background: var(--superficie); border: 1px solid var(--borde); border-radius: 12px; padding: 24px; }
+
+.Columna h3 { margin-top: 0; }
+
+.Columna.Pro { border-top: 4px solid var(--ok); }
+
+.Columna.Contra { border-top: 4px solid var(--aviso); }
+
+.Columna ul { margin: 0; padding-left: 20px; color: var(--texto-2); line-height: 1.8; }
+
+/* Avisos / callouts */
+
+.Aviso {
+    max-width: 820px;
+    margin: 30px auto;
+    padding: 18px 22px;
+    border-radius: 10px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--acento-2);
+    color: var(--texto-2);
+    line-height: 1.65;
+}
+
+.Aviso strong { color: var(--texto); }
+
+/* Pasos numerados */
+
+.Pasos { list-style: none; counter-reset: paso; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+
+.Pasos li { counter-increment: paso; background: var(--superficie); border: 1px solid var(--borde); border-radius: 12px; padding: 24px 22px; }
+
+.Pasos li::before {
+    content: counter(paso);
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--boton);
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.Pasos h3 { margin: 0 0 8px 0; font-size: 19px; }
+
+.Pasos p { margin: 0; color: var(--texto-3); font-size: 15px; line-height: 1.6; }
+
+/* Filtros */
+
+.Filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px; }
+
+.BotonFiltro {
+    font-size: 15px;
+    font-family: inherit;
+    padding: 8px 18px;
+    border-radius: 22px;
+    border: 1.5px solid var(--borde);
+    background: transparent;
+    color: var(--texto);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.BotonFiltro:hover { border-color: var(--acento); }
+
+.BotonFiltro[aria-pressed="true"] { background: var(--acento); color: var(--sobre-acento); border-color: var(--acento); font-weight: bold; }
+
+.Conteo { text-align: center; color: var(--texto-3); font-size: 14px; margin: -10px 0 24px 0; }
+
+[hidden] { display: none !important; }
+
+/* Anterior / siguiente */
+
+.Pager { max-width: 1200px; margin: 20px auto 0 auto; padding: 0 32px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+.Pager a {
+    display: block;
+    flex: 1 1 260px;
+    max-width: 48%;
+    text-decoration: none;
+    padding: 18px 22px;
+    border-radius: 12px;
+    border: 1.5px solid var(--borde);
+    background: var(--superficie);
+    color: var(--texto);
+    transition: all 0.3s ease;
+}
+
+.Pager a:hover { border-color: var(--acento); transform: translateY(-3px); }
+
+.Pager small { display: block; color: var(--texto-3); margin-bottom: 4px; }
+
+.Pager strong { color: var(--acento); font-size: 18px; }
+
+.Pager .Sig { text-align: right; margin-left: auto; }
+
+/* ===== 7. Herramientas interactivas ===== */
+
+.CajaInteractiva {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 520px;
+    margin: 0 auto;
+    box-shadow: var(--sombra);
+    color: var(--texto);
+}
+
+.GrupoInput { margin-bottom: 20px; display: flex; flex-direction: column; }
+
+.GrupoInput label { font-size: 0.95rem; font-weight: 600; color: var(--acento); margin-bottom: 8px; }
+
+.GrupoInput .Ayuda { font-size: 13px; color: var(--texto-3); margin-top: 6px; }
+
+.InputControl {
+    background-color: var(--fondo);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: var(--texto);
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.InputControl:focus { border-color: var(--acento); box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.25); }
+
+.InputControl.Invalido { border-color: var(--error); }
+
+.BotonAccion {
+    width: 100%;
+    background: var(--boton);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.BotonAccion:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+.BotonAccion:active { transform: translateY(1px); }
+
+.BotonAccion:disabled { opacity: 0.45; cursor: not-allowed; transform: none; filter: none; }
+
+.BotonLink {
+    background: none;
+    border: none;
+    color: var(--acento);
+    cursor: pointer;
+    font-size: 15px;
+    font-family: inherit;
+    text-decoration: underline;
+    padding: 10px 0 0 0;
+}
+
+.FilaBotones { display: flex; gap: 12px; align-items: center; }
+
+.FilaBotones .BotonAccion { flex: 1; }
+
+#resultadoDOM { margin-top: 22px; font-size: 0.95rem; }
+
+.TarjetaResultado {
+    background: var(--fondo);
+    border-left: 4px solid var(--azul);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    color: var(--texto-2);
+    animation: aparecer 0.4s ease;
+}
+
+.TarjetaResultado.Error { border-left-color: var(--error); }
+
+.TarjetaResultado.Exito { border-left-color: var(--ok); }
+
+.ResTitulo { font-weight: 700; color: var(--acento); margin-bottom: 6px; }
+
+.ResLinea { font-size: 0.92rem; margin: 2px 0; }
+
+.ResLinea strong { color: var(--texto); }
+
+.TarjetaResultado hr { border: 0; border-top: 1px solid var(--borde); margin: 10px 0; }
+
+.ResTotal { font-size: 1.25rem; font-weight: 700; color: var(--texto); }
+
+.ResError { color: var(--error); font-weight: 600; }
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.Barra { height: 14px; border-radius: 8px; background: var(--borde); overflow: hidden; margin: 8px 0; display: flex; }
+
+.Barra .TramoA { background: var(--acento); transition: width 0.5s ease; }
+
+.Barra .TramoB { background: var(--acento-2); transition: width 0.5s ease; }
+
+.Leyenda { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--texto-3); }
+
+.Leyenda i { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 5px; vertical-align: middle; }
+
+/* Botón volver arriba */
+
+.BotonSubir {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: var(--boton);
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    z-index: 900;
+}
+
+.BotonSubir.Visible { opacity: 1; visibility: visible; transform: translateY(0); }
+
+/* Aparición al hacer scroll (solo con JS) */
+
+.js-listo .Reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+
+.js-listo .Reveal.Visible { opacity: 1; transform: translateY(0); }
+
+/* ===== 8. Pie de página ===== */
+
+.CloudFooter {
+    margin-top: 70px;
+    background-color: var(--fondo-2);
+    border-top: 1px solid var(--borde);
+    color: var(--texto-2);
+}
+
+.CloudFooter h2 { font-size: 16px; margin: 0 0 12px 0; color: var(--texto); }
+
+.CloudFooter p { margin: 0 0 8px 0; font-size: 14px; line-height: 1.6; }
+
+.CloudFooter ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 14px; }
+
+.CloudFooter a { color: var(--texto-2); }
+
+.CloudFooter a:hover { color: var(--acento); }
+
+.FooterBase {
+    border-top: 1px solid var(--borde);
+    text-align: center;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: var(--texto-3);
+}
+
+.FooterBase p { margin: 0 0 4px 0; }
+
+/* ===== 9. Responsive ===== */
+
+@media (max-width: 1180px) {
+    .AlineacionTarjeta { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 860px) {
+    .HeroPagina { grid-template-columns: 1fr; padding: 24px 20px 10px 20px; }
+
+    .HeroPagina img { order: -1; max-width: 480px; margin: 0 auto; }
+
+    .DosColumnas { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .CabeceraTop { padding: 10px 16px; }
+
+    .NombreMarca { font-size: 21px; }
+
+    .SeccionContenedor { padding: 50px 16px; }
+
+    .SeccionOscura { border-radius: 0; }
+
+    .CloudContent { padding: 40px 16px; }
+
+    .DescripcionSeccion { font-size: 16px; }
+
+    .AlineacionTarjeta { grid-template-columns: 1fr; }
+
+    .CajaInteractiva { padding: 22px 18px; }
+
+    .Migas { padding: 14px 16px 0 16px; }
+
+    .Pager { padding: 0 16px; }
+
+    .Pager a { max-width: 100%; }
+
+    .GridCifras { padding: 10px 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+
+    .js-listo .Reveal { opacity: 1; transform: none; }
+}

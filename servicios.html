@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quién administra qué en IaaS, PaaS, SaaS y serverless.">
+    <meta name="theme-color" content="#191e33">
+    <title>Modelos de servicio: IaaS, PaaS y SaaS | CloudComputing</title>
+    <link rel="icon" type="image/svg+xml" href="Imagenes/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/comun.js" defer></script>
+</head>
+<body class="CloudBody">
+
+    <a href="#contenido" class="SaltarContenido">Saltar al contenido</a>
+
+    <header class="Cabecera">
+        <div class="CabeceraTop">
+            <a href="index.html" class="Marca" aria-label="CloudComputing, ir al inicio">
+                <img id="CloudLogo" src="Imagenes/Cloud_logo.jpg" alt="Logo de Cloud Computing" width="46" height="46">
+                <span class="NombreMarca">Cloud<span class="texto-celeste">Computing</span></span>
+            </a>
+        </div>
+        <nav class="NavPrincipal" id="menuPrincipal" aria-label="Navegación principal">
+            <ul class="ListaNav">
+                <li><a class="NavH3" href="index.html">Inicio</a></li>
+                <li><a class="NavH3" href="que-es.html">¿Qué es?</a></li>
+                <li><a class="NavH3 Activo" href="servicios.html" aria-current="page">Servicios</a></li>
+                <li><a class="NavH3" href="despliegue.html">Despliegue</a></li>
+                <li><a class="NavH3" href="seguridad.html">Seguridad</a></li>
+                <li><a class="NavH3" href="aplicaciones.html">Aplicaciones</a></li>
+                <li><a class="NavH3" href="proveedores.html">Proveedores</a></li>
+                <li><a class="NavH3" href="simulador.html">Simulador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="Migas" aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Modelos de servicio: IaaS, PaaS y SaaS</span></li>
+        </ol>
+    </nav>
+    <main id="contenido">
+
+    <section class="HeroPagina">
+        <div>
+            <span class="Etiqueta">Modelos de servicio</span>
+            <h1>IaaS, PaaS y SaaS: <span class="texto-multicolor">quién administra qué</span></h1>
+            <p class="Lead">Cada modelo reparte las responsabilidades de manera distinta entre tú y el proveedor. Elegir bien ahorra tiempo y dinero.</p>
+            <ul class="Indice" aria-label="En esta página"><li><a href="#resumen">Resumen</a></li><li><a href="#modelos">Los tres modelos</a></li><li><a href="#serverless">Serverless</a></li><li><a href="#comparativa">Comparativa</a></li></ul>
+        </div>
+        <img src="Imagenes/servicios-capas.svg" alt="Capas que administra el usuario y el proveedor" width="560" height="330">
+    </section>
+
+    <section id="resumen" class="SeccionContenedor Reveal" aria-labelledby="resumen-t">
+        <h2 class="TituloSeccion" id="resumen-t">Tres capas, tres niveles de control</h2>
+        <p class="DescripcionSeccion">La nube ofrece tres modelos principales según el nivel de control que necesites:</p>
+        <div class="Aviso"><strong>La analogía de la pizza.</strong> IaaS es comprar la masa y cocinarla en un horno prestado; PaaS es pedir la pizza para recoger y poner tú la mesa; SaaS es cenar en el restaurante: solo disfrutas.</div>
+    </section>
+
+    <section id="modelos" class="SeccionContenedor SeccionOscura Reveal" aria-labelledby="modelos-t">
+        <h2 class="TituloSeccion" id="modelos-t">Los tres modelos principales</h2>
+
+        <div class="GridServicios">
+            <div class="TarjetaServicio">
+                <span class="Badge">Bajo nivel</span>
+                <h3>IaaS</h3>
+                <h4>Infraestructura como Servicio</h4>
+                <p>Proporciona los bloques fundamentales de TI. Otorga acceso a recursos de red, computadoras (virtuales o dedicadas) y espacio de almacenamiento.</p>
+                <ul class="ListaDetalles">
+                    <li><strong>Control:</strong> alto sobre la infraestructura.</li>
+                    <li><strong>Ejemplos:</strong> AWS EC2, Google Compute Engine, Azure Virtual Machines.</li>
+                </ul>
+            </div>
+            <div class="TarjetaServicio Destacada">
+                <span class="Badge">Nivel intermedio</span>
+                <h3>PaaS</h3>
+                <h4>Plataforma como Servicio</h4>
+                <p>Elimina la necesidad de gestionar la infraestructura subyacente (servidores, sistema operativo) para centrarse únicamente en la implementación y gestión de aplicaciones.</p>
+                <ul class="ListaDetalles">
+                    <li><strong>Control:</strong> medio (enfocado en el código).</li>
+                    <li><strong>Ejemplos:</strong> Heroku, AWS Elastic Beanstalk, Google App Engine.</li>
+                </ul>
+            </div>
+            <div class="TarjetaServicio">
+                <span class="Badge">Nivel usuario</span>
+                <h3>SaaS</h3>
+                <h4>Software como Servicio</h4>
+                <p>Proporciona un producto completo ejecutado y gestionado por el proveedor del servicio. El usuario no se ocupa del mantenimiento del software.</p>
+                <ul class="ListaDetalles">
+                    <li><strong>Control:</strong> bajo (solo configuración).</li>
+                    <li><strong>Ejemplos:</strong> Google Workspace, Microsoft 365, Salesforce.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="serverless" class="SeccionContenedor Reveal" aria-labelledby="serverless-t">
+        <h2 class="TituloSeccion" id="serverless-t">Un modelo emergente: serverless (FaaS)</h2>
+        <p class="Prosa">En las <strong>funciones como servicio</strong> (FaaS) escribes una pequeña función y el proveedor la ejecuta solo cuando ocurre un evento (una petición web, un archivo subido, un mensaje). No administras servidores, la capacidad se ajusta sola y pagas únicamente por el tiempo de ejecución. Ejemplos: AWS Lambda, Azure Functions y Google Cloud Functions.</p>
+    </section>
+
+    <section id="comparativa" class="SeccionContenedor SeccionOscura Reveal" aria-labelledby="comparativa-t">
+        <h2 class="TituloSeccion" id="comparativa-t">Comparativa rápida</h2>
+        <div class="TablaWrap" role="region" aria-label="Comparación entre IaaS, PaaS y SaaS" tabindex="0">
+            <table class="Tabla">
+                <caption>Comparación entre IaaS, PaaS y SaaS</caption>
+                <thead><tr><th scope="col">Criterio</th><th scope="col">IaaS</th><th scope="col">PaaS</th><th scope="col">SaaS</th></tr></thead>
+                <tbody>
+                    <tr><th scope="row">Qué recibes</th><td>Servidores, red y almacenamiento virtuales</td><td>Plataforma para desarrollar y ejecutar aplicaciones</td><td>Una aplicación lista para usar</td></tr>
+                    <tr><th scope="row">Qué administras tú</th><td>Sistema operativo, middleware, datos y aplicaciones</td><td>Tu código y tus datos</td><td>Tu cuenta y su configuración</td></tr>
+                    <tr><th scope="row">Qué administra el proveedor</th><td>Hardware, red y virtualización</td><td>Además, el sistema operativo y el entorno de ejecución</td><td>Toda la pila tecnológica</td></tr>
+                    <tr><th scope="row">Flexibilidad</th><td>Muy alta</td><td>Media</td><td>Baja</td></tr>
+                    <tr><th scope="row">Esfuerzo operativo</th><td>Alto</td><td>Medio</td><td>Mínimo</td></tr>
+                    <tr><th scope="row">Ideal para</th><td>Equipos de infraestructura y migraciones</td><td>Equipos que quieren publicar rápido</td><td>Usuarios que necesitan una herramienta ya hecha</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    </main>
+
+    <nav class="Pager" aria-label="Navegación entre páginas"><a href="que-es.html" rel="prev"><small>← Anterior</small><strong>¿Qué es?</strong></a><a class="Sig" href="despliegue.html" rel="next"><small>Siguiente →</small><strong>Despliegue</strong></a></nav>
+    <button id="btnSubir" class="BotonSubir" type="button" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
+
+    <footer class="CloudFooter">
+        <div class="FooterBase">
+            <p>Proverbios 16:3 "Encomienda al Señor tus obras, y tus pensamientos serán afirmados"</p>        </div>
+    </footer>
+</body>
+</html>

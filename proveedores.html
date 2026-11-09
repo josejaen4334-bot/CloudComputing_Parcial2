@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AWS, Azure, Google Cloud, IBM, Oracle y Alibaba.">
+    <meta name="theme-color" content="#191e33">
+    <title>Principales proveedores | CloudComputing</title>
+    <link rel="icon" type="image/svg+xml" href="Imagenes/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/comun.js" defer></script>
+    <script src="js/filtro.js" defer></script>
+</head>
+<body class="CloudBody">
+
+    <a href="#contenido" class="SaltarContenido">Saltar al contenido</a>
+
+    <header class="Cabecera">
+        <div class="CabeceraTop">
+            <a href="index.html" class="Marca" aria-label="CloudComputing, ir al inicio">
+                <img id="CloudLogo" src="Imagenes/Cloud_logo.jpg" alt="Logo de Cloud Computing" width="46" height="46">
+                <span class="NombreMarca">Cloud<span class="texto-celeste">Computing</span></span>
+            </a>
+        </div>
+        <nav class="NavPrincipal" id="menuPrincipal" aria-label="Navegación principal">
+            <ul class="ListaNav">
+                <li><a class="NavH3" href="index.html">Inicio</a></li>
+                <li><a class="NavH3" href="que-es.html">¿Qué es?</a></li>
+                <li><a class="NavH3" href="servicios.html">Servicios</a></li>
+                <li><a class="NavH3" href="despliegue.html">Despliegue</a></li>
+                <li><a class="NavH3" href="seguridad.html">Seguridad</a></li>
+                <li><a class="NavH3" href="aplicaciones.html">Aplicaciones</a></li>
+                <li><a class="NavH3 Activo" href="proveedores.html" aria-current="page">Proveedores</a></li>
+                <li><a class="NavH3" href="simulador.html">Simulador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="Migas" aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Principales proveedores</span></li>
+        </ol>
+    </nav>
+    <main id="contenido">
+
+    <section class="HeroPagina">
+        <div>
+            <span class="Etiqueta">Proveedores</span>
+            <h1>Quién ofrece <span class="texto-multicolor">la nube</span></h1>
+            <p class="Lead">Tres grandes proveedores concentran gran parte del mercado, pero existen otras opciones con fortalezas particulares.</p>
+            <ul class="Indice" aria-label="En esta página"><li><a href="#lista">Proveedores</a></li><li><a href="#equivalencias">Equivalencias</a></li><li><a href="#elegir">Cómo elegir</a></li></ul>
+        </div>
+        <img src="Imagenes/proveedores-regiones.svg" alt="Un globo conectado a centros de datos en distintas regiones" width="560" height="300">
+    </section>
+
+    <section id="lista" class="SeccionContenedor Reveal" aria-labelledby="lista-t">
+        <h2 class="TituloSeccion" id="lista-t">Principales proveedores</h2>
+        <p class="DescripcionSeccion">Los proveedores de servicios en la nube ofrecen soluciones de infraestructura, plataforma y software para empresas y usuarios individuales. Las etiquetas muestran algunos de sus servicios más conocidos.</p>
+
+        <div class="Filtros" data-filtros="#gridProv" data-conteo="conteoProv" role="group" aria-label="Filtrar proveedores">
+            <button type="button" class="BotonFiltro" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="BotonFiltro" data-filtro="grandes" aria-pressed="false">Los tres grandes</button>
+            <button type="button" class="BotonFiltro" data-filtro="empresa" aria-pressed="false">Enfoque empresarial</button>
+            <button type="button" class="BotonFiltro" data-filtro="otros" aria-pressed="false">Otros relevantes</button>
+        </div>
+        <p class="Conteo" id="conteoProv" aria-live="polite"></p>
+        <div class="GridDespliegue" id="gridProv">
+            <div class="TarjetaDespliegue" data-categoria="grandes">
+                <h3>Amazon Web Services (AWS)</h3>
+                <p>Pionero de la nube moderna (2006) con el catálogo más amplio de servicios y una enorme red de regiones.</p>
+                <div class="Etiquetas"><span class="Chip">EC2</span><span class="Chip">S3</span><span class="Chip">Lambda</span><span class="Chip">RDS</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="grandes empresa">
+                <h3>Microsoft Azure</h3>
+                <p>Muy integrado con el ecosistema de Microsoft (Windows, Office, Active Directory) y con fuerte enfoque en soluciones híbridas.</p>
+                <div class="Etiquetas"><span class="Chip">Virtual Machines</span><span class="Chip">Blob Storage</span><span class="Chip">Azure Functions</span><span class="Chip">Azure SQL</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="grandes">
+                <h3>Google Cloud Platform (GCP)</h3>
+                <p>Destaca en análisis de datos, inteligencia artificial y contenedores; Kubernetes nació en Google.</p>
+                <div class="Etiquetas"><span class="Chip">Compute Engine</span><span class="Chip">Cloud Storage</span><span class="Chip">BigQuery</span><span class="Chip">GKE</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="empresa">
+                <h3>IBM Cloud</h3>
+                <p>Orientado a empresas e industrias reguladas, con foco en nube híbrida y tecnologías basadas en Red Hat OpenShift.</p>
+                <div class="Etiquetas"><span class="Chip">Virtual Servers</span><span class="Chip">Cloud Object Storage</span><span class="Chip">OpenShift</span><span class="Chip">watsonx</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="empresa">
+                <h3>Oracle Cloud (OCI)</h3>
+                <p>Ideal para quienes ya usan bases de datos Oracle, con servicios de bases de datos autónomas.</p>
+                <div class="Etiquetas"><span class="Chip">OCI Compute</span><span class="Chip">Object Storage</span><span class="Chip">Autonomous Database</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="otros">
+                <h3>Alibaba Cloud</h3>
+                <p>Proveedor con gran presencia en Asia y una oferta amplia de cómputo, almacenamiento y bases de datos.</p>
+                <div class="Etiquetas"><span class="Chip">ECS</span><span class="Chip">OSS</span><span class="Chip">ApsaraDB</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equivalencias" class="SeccionContenedor SeccionOscura Reveal" aria-labelledby="equivalencias-t">
+        <h2 class="TituloSeccion" id="equivalencias-t">Servicios equivalentes entre proveedores</h2>
+        <p class="DescripcionSeccion">Aunque los nombres cambian, los conceptos son los mismos. Aprender uno te ayuda a entender los demás.</p>
+        <div class="TablaWrap" role="region" aria-label="Equivalencias entre AWS, Azure y Google Cloud" tabindex="0">
+            <table class="Tabla">
+                <caption>Equivalencias entre AWS, Azure y Google Cloud</caption>
+                <thead><tr><th scope="col">Tipo de servicio</th><th scope="col">AWS</th><th scope="col">Microsoft Azure</th><th scope="col">Google Cloud</th></tr></thead>
+                <tbody>
+                    <tr><th scope="row">Máquinas virtuales</th><td>EC2</td><td>Virtual Machines</td><td>Compute Engine</td></tr>
+                    <tr><th scope="row">Almacenamiento de objetos</th><td>S3</td><td>Blob Storage</td><td>Cloud Storage</td></tr>
+                    <tr><th scope="row">Funciones serverless</th><td>Lambda</td><td>Azure Functions</td><td>Cloud Functions</td></tr>
+                    <tr><th scope="row">Base de datos relacional administrada</th><td>RDS</td><td>Azure SQL Database</td><td>Cloud SQL</td></tr>
+                    <tr><th scope="row">Kubernetes administrado</th><td>EKS</td><td>AKS</td><td>GKE</td></tr>
+                    <tr><th scope="row">Red de entrega de contenido (CDN)</th><td>CloudFront</td><td>Azure CDN / Front Door</td><td>Cloud CDN</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="elegir" class="SeccionContenedor Reveal" aria-labelledby="elegir-t">
+        <h2 class="TituloSeccion" id="elegir-t">¿Cómo elegir un proveedor?</h2>
+        <ol class="Pasos">
+            <li><h3>Qué necesitas</h3><p>Lista los servicios que vas a usar (cómputo, bases de datos, IA) y confirma que el proveedor los ofrece.</p></li>
+            <li><h3>Dónde están tus usuarios</h3><p>Elige regiones cercanas para reducir la latencia y cumplir las leyes de ubicación de datos.</p></li>
+            <li><h3>Cuánto vas a pagar</h3><p>Compara precios con calculadoras oficiales y revisa descuentos, niveles gratuitos y costos de salida de datos.</p></li>
+            <li><h3>Qué ya sabes usar</h3><p>Si tu equipo domina un ecosistema, aprovecharlo reduce el tiempo de adopción.</p></li>
+        </ol>
+    </section>
+    </main>
+
+    <nav class="Pager" aria-label="Navegación entre páginas"><a href="aplicaciones.html" rel="prev"><small>← Anterior</small><strong>Aplicaciones</strong></a><a class="Sig" href="simulador.html" rel="next"><small>Siguiente →</small><strong>Simulador</strong></a></nav>
+    <button id="btnSubir" class="BotonSubir" type="button" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
+
+    <footer class="CloudFooter">
+        <div class="FooterBase">
+            <p>Proverbios 16:3 "Encomienda al Señor tus obras, y tus pensamientos serán afirmados"</p>
+        </div>
+    </footer>
+</body>
+</html>

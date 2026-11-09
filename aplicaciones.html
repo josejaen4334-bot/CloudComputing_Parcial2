@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casos de uso cotidianos y beneficios.">
+    <meta name="theme-color" content="#191e33">
+    <title>Aplicaciones de la computación en la nube | CloudComputing</title>
+    <link rel="icon" type="image/svg+xml" href="Imagenes/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/comun.js" defer></script>
+    <script src="js/filtro.js" defer></script>
+</head>
+<body class="CloudBody">
+
+    <a href="#contenido" class="SaltarContenido">Saltar al contenido</a>
+
+    <header class="Cabecera">
+        <div class="CabeceraTop">
+            <a href="index.html" class="Marca" aria-label="CloudComputing, ir al inicio">
+                <img id="CloudLogo" src="Imagenes/Cloud_logo.jpg" alt="Logo de Cloud Computing" width="46" height="46">
+                <span class="NombreMarca">Cloud<span class="texto-celeste">Computing</span></span>
+            </a>
+        </div>
+        <nav class="NavPrincipal" id="menuPrincipal" aria-label="Navegación principal">
+            <ul class="ListaNav">
+                <li><a class="NavH3" href="index.html">Inicio</a></li>
+                <li><a class="NavH3" href="que-es.html">¿Qué es?</a></li>
+                <li><a class="NavH3" href="servicios.html">Servicios</a></li>
+                <li><a class="NavH3" href="despliegue.html">Despliegue</a></li>
+                <li><a class="NavH3" href="seguridad.html">Seguridad</a></li>
+                <li><a class="NavH3 Activo" href="aplicaciones.html" aria-current="page">Aplicaciones</a></li>
+                <li><a class="NavH3" href="proveedores.html">Proveedores</a></li>
+                <li><a class="NavH3" href="simulador.html">Simulador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="Migas" aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Aplicaciones de la computación en la nube</span></li>
+        </ol>
+    </nav>
+    <main id="contenido">
+
+    <section class="HeroPagina">
+        <div>
+            <span class="Etiqueta">Aplicaciones</span>
+            <h1>La nube en <span class="texto-multicolor">tu vida diaria</span></h1>
+            <p class="Lead">Aunque no lo notes, la usas todos los días: al revisar el correo, ver una serie, guardar una foto o entrar a clases virtuales.</p>
+            <ul class="Indice" aria-label="En esta página"><li><a href="#casos">Casos de uso</a></li><li><a href="#beneficios">Beneficios</a></li></ul>
+        </div>
+        <img src="Imagenes/aplicaciones-dispositivos.svg" alt="Portátil, teléfono y tableta conectados a una nube" width="560" height="260">
+    </section>
+
+    <section id="casos" class="SeccionContenedor Reveal" aria-labelledby="casos-t">
+        <h2 class="TituloSeccion" id="casos-t">Casos de uso cotidianos</h2>
+        <p class="DescripcionSeccion">La computación en la nube se aplica en la vida cotidiana mediante el correo electrónico, el almacenamiento de archivos, las redes sociales y los servicios de streaming, entre muchos otros.</p>
+
+        <div class="Filtros" data-filtros="#gridApps" data-conteo="conteoApps" role="group" aria-label="Filtrar por categoría">
+            <button type="button" class="BotonFiltro" data-filtro="todos" aria-pressed="true">Todas</button>
+            <button type="button" class="BotonFiltro" data-filtro="personal" aria-pressed="false">Personal</button>
+            <button type="button" class="BotonFiltro" data-filtro="entretenimiento" aria-pressed="false">Entretenimiento</button>
+            <button type="button" class="BotonFiltro" data-filtro="empresa" aria-pressed="false">Empresa</button>
+            <button type="button" class="BotonFiltro" data-filtro="educacion-salud" aria-pressed="false">Educación y salud</button>
+        </div>
+        <p class="Conteo" id="conteoApps" aria-live="polite"></p>
+        <div class="GridDespliegue" id="gridApps">
+            <div class="TarjetaDespliegue" data-categoria="personal">
+                <h3>Correo electrónico</h3>
+                <p>Servicios como Gmail, Outlook o Yahoo permiten enviar, recibir y consultar mensajes desde el teléfono, la computadora o la tableta.</p>
+                <div class="Etiquetas"><span class="Chip">Personal</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="personal empresa">
+                <h3>Almacenamiento en la nube</h3>
+                <p>Google Drive, OneDrive, Dropbox e iCloud permiten guardar fotos, documentos, videos y respaldos en línea.</p>
+                <div class="Etiquetas"><span class="Chip">Personal</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="personal">
+                <h3>Redes sociales</h3>
+                <p>Plataformas como Facebook, Instagram, TikTok y WhatsApp almacenan fotos, videos, mensajes y perfiles en la nube.</p>
+                <div class="Etiquetas"><span class="Chip">Personal</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="entretenimiento">
+                <h3>Música y video</h3>
+                <p>Netflix, YouTube, Spotify, Disney+ y Amazon Prime Video utilizan la nube para ofrecer contenido sin necesidad de descargarlo.</p>
+                <div class="Etiquetas"><span class="Chip">Entretenimiento</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="entretenimiento">
+                <h3>Videojuegos en la nube</h3>
+                <p>El juego se ejecuta en servidores y llega a tu dispositivo como video, sin necesitar una computadora potente.</p>
+                <div class="Etiquetas"><span class="Chip">Entretenimiento</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="empresa">
+                <h3>Software de trabajo colaborativo</h3>
+                <p>Suites ofimáticas, videollamadas, CRM y ERP se usan como servicio, con equipos que editan al mismo tiempo desde distintos lugares.</p>
+                <div class="Etiquetas"><span class="Chip">Empresa</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="empresa">
+                <h3>Análisis de datos e inteligencia artificial</h3>
+                <p>Entrenar modelos y procesar grandes volúmenes de datos se hace alquilando potencia de cálculo solo mientras se necesita.</p>
+                <div class="Etiquetas"><span class="Chip">Empresa</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="educacion-salud">
+                <h3>Educación en línea</h3>
+                <p>Aulas virtuales y plataformas como Moodle o Google Classroom permiten dar clases, entregar tareas y consultar notas desde cualquier lugar.</p>
+                <div class="Etiquetas"><span class="Chip">Educación y salud</span></div>
+            </div>
+            <div class="TarjetaDespliegue" data-categoria="educacion-salud">
+                <h3>Salud digital</h3>
+                <p>Historias clínicas electrónicas, telemedicina y almacenamiento de imágenes médicas, con controles estrictos de privacidad.</p>
+                <div class="Etiquetas"><span class="Chip">Educación y salud</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="SeccionContenedor Reveal" aria-labelledby="beneficios-t">
+        <h2 class="TituloSeccion" id="beneficios-t">Beneficios de usar la nube</h2>
+        <div class="AlineacionTarjeta">
+            <div class="TarjetaDespliegue"><h3>Ahorro de costos</h3><p>Permite pagar solo por los recursos que se utilizan, reduciendo la necesidad de comprar servidores y equipos costosos.</p></div>
+            <div class="TarjetaDespliegue"><h3>Acceso remoto</h3><p>Los archivos, aplicaciones y servicios pueden utilizarse desde una computadora, teléfono o tableta con conexión a Internet.</p></div>
+            <div class="TarjetaDespliegue"><h3>Escalabilidad</h3><p>Permite aumentar o disminuir el almacenamiento y la capacidad según las necesidades del usuario o la empresa.</p></div>
+            <div class="TarjetaDespliegue"><h3>Trabajo en equipo</h3><p>Varias personas pueden editar documentos, compartir archivos y comunicarse en tiempo real desde diferentes lugares.</p></div>
+            <div class="TarjetaDespliegue"><h3>Respaldo de datos</h3><p>La información puede guardarse automáticamente y recuperarse si un dispositivo se daña, se pierde o sufre un ataque.</p></div>
+            <div class="TarjetaDespliegue"><h3>Mantenimiento automático</h3><p>Los proveedores de la nube se encargan de mantener la infraestructura, lo que reduce la carga de trabajo para los usuarios y las empresas.</p></div>
+        </div>
+    </section>
+    </main>
+
+    <nav class="Pager" aria-label="Navegación entre páginas"><a href="seguridad.html" rel="prev"><small>← Anterior</small><strong>Seguridad</strong></a><a class="Sig" href="proveedores.html" rel="next"><small>Siguiente →</small><strong>Proveedores</strong></a></nav>
+    <button id="btnSubir" class="BotonSubir" type="button" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
+
+    <footer class="CloudFooter">
+        <div class="FooterBase">
+            <p>Proverbios 16:3 "Encomienda al Señor tus obras, y tus pensamientos serán afirmados"</p>
+        </div>
+    </footer>
+</body>
+</html>

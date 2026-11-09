@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calcula y compara costos de IaaS, PaaS y SaaS.">
+    <meta name="theme-color" content="#191e33">
+    <title>Simulador de costos | CloudComputing</title>
+    <link rel="icon" type="image/svg+xml" href="Imagenes/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/comun.js" defer></script>
+    <script src="js/simulador.js" defer></script>
+</head>
+<body class="CloudBody">
+
+    <a href="#contenido" class="SaltarContenido">Saltar al contenido</a>
+
+    <header class="Cabecera">
+        <div class="CabeceraTop">
+            <a href="index.html" class="Marca" aria-label="CloudComputing, ir al inicio">
+                <img id="CloudLogo" src="Imagenes/Cloud_logo.jpg" alt="Logo de Cloud Computing" width="46" height="46">
+                <span class="NombreMarca">Cloud<span class="texto-celeste">Computing</span></span>
+            </a>
+        </div>
+        <nav class="NavPrincipal" id="menuPrincipal" aria-label="Navegación principal">
+            <ul class="ListaNav">
+                <li><a class="NavH3" href="index.html">Inicio</a></li>
+                <li><a class="NavH3" href="que-es.html">¿Qué es?</a></li>
+                <li><a class="NavH3" href="servicios.html">Servicios</a></li>
+                <li><a class="NavH3" href="despliegue.html">Despliegue</a></li>
+                <li><a class="NavH3" href="seguridad.html">Seguridad</a></li>
+                <li><a class="NavH3" href="aplicaciones.html">Aplicaciones</a></li>
+                <li><a class="NavH3" href="proveedores.html">Proveedores</a></li>
+                <li><a class="NavH3 Activo" href="simulador.html" aria-current="page">Simulador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="Migas" aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Simulador de costos</span></li>
+        </ol>
+    </nav>
+    <main id="contenido">
+
+    <section class="HeroPagina">
+        <div>
+            <span class="Etiqueta">Herramienta interactiva</span>
+            <h1>Simulador de <span class="texto-multicolor">costos en la nube</span></h1>
+        </div>
+        <img src="Imagenes/simulador-calculadora.svg" alt="Una calculadora junto a un gráfico de barras" width="560" height="300">
+    </section>
+
+    <section id="calculadora-dom" class="SeccionContenedor Reveal" aria-labelledby="calculadora-dom-t">
+        <h2 class="TituloSeccion" id="calculadora-dom-t">Calcula tu costo mensual</h2>
+        <p class="DescripcionSeccion">Introduce tus datos y compara cuánto costaría cada modelo de servicio.</p>
+
+        <form class="CajaInteractiva" id="formSimulador" novalidate>
+            <div class="GrupoInput">
+                <label for="selectServicio">Modelo de servicio</label>
+                <select id="selectServicio" class="InputControl">
+                    <option value="IaaS">IaaS ($0.05 por instancia-hora)</option>
+                    <option value="PaaS">PaaS ($0.12 por instancia-hora)</option>
+                    <option value="SaaS">SaaS ($0.25 por instancia-hora)</option>
+                </select>
+            </div>
+            <div class="GrupoInput">
+                <label for="inputHoras">Horas de uso al mes</label>
+                <input type="number" id="inputHoras" class="InputControl" placeholder="Ej. 100" min="1" max="744" step="any" inputmode="decimal" aria-describedby="ayudaHoras">
+                <span class="Ayuda" id="ayudaHoras">Entre 1 y 744 horas (un mes de 31 días).</span>
+            </div>
+            <div class="GrupoInput">
+                <label for="inputInstancias">Número de instancias</label>
+                <input type="number" id="inputInstancias" class="InputControl" value="1" min="1" max="100" step="1" inputmode="numeric" aria-describedby="ayudaInst">
+                <span class="Ayuda" id="ayudaInst">Cuántos servidores o copias de la aplicación usarás (1 a 100).</span>
+            </div>
+            <div class="GrupoInput">
+                <label for="inputAlmacenamiento">Almacenamiento en GB (opcional)</label>
+                <input type="number" id="inputAlmacenamiento" class="InputControl" placeholder="Ej. 50" min="0" max="100000" step="any" inputmode="decimal" aria-describedby="ayudaGb">
+                <span class="Ayuda" id="ayudaGb">$0.02 por GB al mes.</span>
+            </div>
+            <div class="FilaBotones">
+                <button type="submit" id="btnCalcular" class="BotonAccion">Calcular costo en la nube</button>
+                <button type="button" class="BotonLink" id="btnLimpiar">Limpiar</button>
+            </div>
+            <div id="resultadoDOM" role="status" aria-live="polite"></div>
+        </form>
+    </section>
+    </main>
+
+    <nav class="Pager" aria-label="Navegación entre páginas">
+        <a href="proveedores.html" rel="prev"><small>← Anterior</small><strong>Proveedores</strong></a>
+    </nav>
+    <button id="btnSubir" class="BotonSubir" type="button" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
+
+    <footer class="CloudFooter">
+        <div class="FooterBase">
+            <p>Proverbios 16:3 "Encomienda al Señor tus obras, y tus pensamientos serán afirmados"</p>        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nube pública, privada, híbrida, multi-cloud y comunitaria, con asistente.">
+    <meta name="theme-color" content="#191e33">
+    <title>Modelos de despliegue | CloudComputing</title>
+    <link rel="icon" type="image/svg+xml" href="Imagenes/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/comun.js" defer></script>
+</head>
+<body class="CloudBody">
+
+    <a href="#contenido" class="SaltarContenido">Saltar al contenido</a>
+
+    <header class="Cabecera">
+        <div class="CabeceraTop">
+            <a href="index.html" class="Marca" aria-label="CloudComputing, ir al inicio">
+                <img id="CloudLogo" src="Imagenes/Cloud_logo.jpg" alt="Logo de Cloud Computing" width="46" height="46">
+                <span class="NombreMarca">Cloud<span class="texto-celeste">Computing</span></span>
+            </a>
+        </div>
+        <nav class="NavPrincipal" id="menuPrincipal" aria-label="Navegación principal">
+            <ul class="ListaNav">
+                <li><a class="NavH3" href="index.html">Inicio</a></li>
+                <li><a class="NavH3" href="que-es.html">¿Qué es?</a></li>
+                <li><a class="NavH3" href="servicios.html">Servicios</a></li>
+                <li><a class="NavH3 Activo" href="despliegue.html" aria-current="page">Despliegue</a></li>
+                <li><a class="NavH3" href="seguridad.html">Seguridad</a></li>
+                <li><a class="NavH3" href="aplicaciones.html">Aplicaciones</a></li>
+                <li><a class="NavH3" href="proveedores.html">Proveedores</a></li>
+                <li><a class="NavH3" href="simulador.html">Simulador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="Migas" aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Modelos de despliegue</span></li>
+        </ol>
+    </nav>
+    <main id="contenido">
+
+    <section class="HeroPagina">
+        <div>
+            <span class="Etiqueta">Modelos de despliegue</span>
+            <h1>Pública, privada, híbrida… <span class="texto-multicolor">¿cuál elegir?</span></h1>
+            <p class="Lead">El modelo de despliegue define quién es dueño de la infraestructura, quién la usa y qué tanto control tienes sobre ella.</p>
+            <ul class="Indice" aria-label="En esta página"><li><a href="#tipos">Los modelos</a></li><li><a href="#comparar">Comparación</a></li><li><a href="#asistente">Asistente interactivo</a></li></ul>
+        </div>
+        <img src="Imagenes/despliegue-nubes.svg" alt="Ilustración de los modelos de despliegue" width="560" height="230">
+    </section>
+
+    <section id="tipos" class="SeccionContenedor Reveal" aria-labelledby="tipos-t">
+        <h2 class="TituloSeccion" id="tipos-t">Cinco formas de desplegar la nube</h2>
+        <p class="DescripcionSeccion">Dónde viven tus recursos importa tanto como qué servicio usas.</p>
+        <div class="GridDespliegue">
+            <div class="TarjetaDespliegue">
+                <h3>Nube pública</h3>
+                <p>La infraestructura pertenece a un proveedor externo que la gestiona y la comparte entre múltiples clientes a través de Internet.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Nube privada</h3>
+                <p>Recursos utilizados exclusivamente por una sola empresa u organización. Puede estar en su propio centro de datos o ser alojada por un tercero.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Nube híbrida</h3>
+                <p>Combina infraestructura pública y privada, permitiendo compartir datos y aplicaciones entre ellas según las necesidades del negocio.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Multi-cloud</h3>
+                <p>Uso de servicios de varios proveedores de nube pública (por ejemplo, AWS + Azure) para prevenir el bloqueo de proveedor y optimizar costos.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Nube comunitaria</h3>
+                <p>Infraestructura compartida por varias organizaciones con intereses comunes, como universidades, gobiernos o instituciones de salud.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparar" class="SeccionContenedor SeccionOscura Reveal" aria-labelledby="comparar-t">
+        <h2 class="TituloSeccion" id="comparar-t">Comparación de modelos</h2>
+        <div class="TablaWrap" role="region" aria-label="Comparación entre modelos de despliegue" tabindex="0">
+            <table class="Tabla">
+                <caption>Comparación entre modelos de despliegue</caption>
+                <thead><tr><th scope="col">Modelo</th><th scope="col">Costo inicial</th><th scope="col">Control</th><th scope="col">Escalabilidad</th><th scope="col">Complejidad</th><th scope="col">Ideal para</th></tr></thead>
+                <tbody>
+                    <tr><th scope="row">Pública</th><td>Bajo</td><td>Menor</td><td>Muy alta</td><td>Baja</td><td>Startups, sitios web, pruebas y cargas variables</td></tr>
+                    <tr><th scope="row">Privada</th><td>Alto</td><td>Máximo</td><td>Limitada a tu capacidad</td><td>Alta</td><td>Datos muy sensibles y normativas estrictas</td></tr>
+                    <tr><th scope="row">Híbrida</th><td>Medio</td><td>Alto</td><td>Alta (usa la pública en los picos)</td><td>Alta</td><td>Empresas con sistemas propios que quieren flexibilidad</td></tr>
+                    <tr><th scope="row">Multi-cloud</th><td>Variable</td><td>Repartido entre proveedores</td><td>Muy alta</td><td>Muy alta</td><td>Evitar dependencia y elegir lo mejor de cada proveedor</td></tr>
+                    <tr><th scope="row">Comunitaria</th><td>Compartido</td><td>Medio</td><td>Media</td><td>Media</td><td>Organizaciones con necesidades similares</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    </main>
+
+    <nav class="Pager" aria-label="Navegación entre páginas"><a href="servicios.html" rel="prev"><small>← Anterior</small><strong>Servicios</strong></a><a class="Sig" href="seguridad.html" rel="next"><small>Siguiente →</small><strong>Seguridad</strong></a></nav>
+    <button id="btnSubir" class="BotonSubir" type="button" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
+
+    <footer class="CloudFooter">
+        </div>
+        <div class="FooterBase">
+            <p>Proverbios 16:3 "Encomienda al Señor tus obras, y tus pensamientos serán afirmados"</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Definición, características esenciales, funcionamiento e historia.">
+    <meta name="theme-color" content="#191e33">
+    <title>¿Qué es la computación en la nube? | CloudComputing</title>
+    <link rel="icon" type="image/svg+xml" href="Imagenes/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/comun.js" defer></script>
+</head>
+<body class="CloudBody">
+
+    <a href="#contenido" class="SaltarContenido">Saltar al contenido</a>
+
+    <header class="Cabecera">
+        <div class="CabeceraTop">
+            <a href="index.html" class="Marca" aria-label="CloudComputing, ir al inicio">
+                <img id="CloudLogo" src="Imagenes/Cloud_logo.jpg" alt="Logo de Cloud Computing" width="46" height="46">
+                <span class="NombreMarca">Cloud<span class="texto-celeste">Computing</span></span>
+            </a>
+        </div>
+        <nav class="NavPrincipal" id="menuPrincipal" aria-label="Navegación principal">
+            <ul class="ListaNav">
+                <li><a class="NavH3" href="index.html">Inicio</a></li>
+                <li><a class="NavH3 Activo" href="que-es.html" aria-current="page">¿Qué es?</a></li>
+                <li><a class="NavH3" href="servicios.html">Servicios</a></li>
+                <li><a class="NavH3" href="despliegue.html">Despliegue</a></li>
+                <li><a class="NavH3" href="seguridad.html">Seguridad</a></li>
+                <li><a class="NavH3" href="aplicaciones.html">Aplicaciones</a></li>
+                <li><a class="NavH3" href="proveedores.html">Proveedores</a></li>
+                <li><a class="NavH3" href="simulador.html">Simulador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="Migas" aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">¿Qué es la computación en la nube?</span></li>
+        </ol>
+    </nav>
+    <main id="contenido">
+
+    <section class="HeroPagina">
+        <div>
+            <span class="Etiqueta">Fundamentos</span>
+            <h1>Qué es la <span class="texto-multicolor">computación en la nube</span></h1>
+            <p class="Lead">Una forma de usar tecnología como un servicio: sin comprar servidores, con capacidad que crece contigo y un cobro basado en el uso.</p>
+            <ul class="Indice" aria-label="En esta página"><li><a href="#definicion">Definición</a></li><li><a href="#caracteristicas">Características</a></li><li><a href="#como-funciona">Cómo funciona</a></li><li><a href="#historia">Historia</a></li><li><a href="#ventajas">Ventajas y desventajas</a></li></ul>
+        </div>
+        <img src="Imagenes/hero-nube.svg" alt="Una nube central conectada a tres servidores" width="520" height="300">
+    </section>
+
+        <section id="definicion" class="SeccionContenedor Reveal" aria-labelledby="definicion-t">
+            <h2 class="TituloSeccion" id="definicion-t">Una definición sencilla</h2>
+            <p class="Prosa">La <strong>computación en la nube</strong> (cloud computing) es la entrega a petición de recursos de TI (como lo son los servidores, almacenamiento, bases de datos, redes, software) a través de Internet con un modelo de <strong>pago por uso</strong>(se paga por lo que se usa). En lugar de comprar, poseer y mantener centros de datos físicos, accedes a esos servicios cuando los necesitas, tal como lo describe el Instituto Nacional de Estándares y Tecnología de EE. UU. (NIST).</p>
+            <div class="Aviso"><strong>Piénsalo como la electricidad.</strong> No construyes tu propia planta eléctrica: enchufas lo que necesitas y pagas por lo que consumes. La nube hace lo mismo con la capacidad de cómputo.</div>
+        <p class="Prosa"><strong>Nube no es lo mismo que Internet.</strong> Internet es la red que conecta los dispositivos; la nube son los servicios y la infraestructura que se ofrecen <em>a través</em> de esa red.</p>
+    </section>
+
+    <section id="caracteristicas" class="SeccionContenedor SeccionOscura Reveal" aria-labelledby="caracteristicas-t">
+        <h2 class="TituloSeccion" id="caracteristicas-t">Las cinco características esenciales</h2>
+        <p class="DescripcionSeccion">El NIST define cinco propiedades que debe tener un servicio para considerarse "nube".</p>
+        <div class="GridTarjetas">
+            <div class="Tarjeta">
+                <div class="IndicadorTarjeta"></div>
+                <h3>Autoservicio bajo demanda</h3>
+                <p>Tú mismo creas y eliminas recursos desde un panel o una API, sin llamar a nadie.</p>
+            </div>
+            <div class="Tarjeta">
+                <div class="IndicadorTarjeta"></div>
+                <h3>Amplio acceso a la red</h3>
+                <p>Los servicios están disponibles por Internet desde computadoras, teléfonos y tabletas.</p>
+            </div>
+            <div class="Tarjeta">
+                <div class="IndicadorTarjeta"></div>
+                <h3>Agrupación de recursos</h3>
+                <p>El proveedor reparte la misma infraestructura entre muchos clientes de forma aislada (multiusuario).</p>
+            </div>
+            <div class="Tarjeta">
+                <div class="IndicadorTarjeta"></div>
+                <h3>Elasticidad rápida</h3>
+                <p>Los recursos crecen o se reducen en segundos o minutos para seguir la demanda real.</p>
+            </div>
+            <div class="Tarjeta">
+                <div class="IndicadorTarjeta"></div>
+                <h3>Servicio medido</h3>
+                <p>El consumo se mide y se factura por uso, con informes transparentes de costos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="SeccionContenedor Reveal" aria-labelledby="como-funciona-t">
+        <h2 class="TituloSeccion" id="como-funciona-t">¿Cómo funciona por dentro?</h2>
+        <p class="DescripcionSeccion">Cuatro piezas hacen posible que alquiles tecnología como si fuera un servicio público.</p>
+        <figure class="Figura">
+            <img src="Imagenes/que-es-virtualizacion.svg" alt="Un servidor físico dividido por un hipervisor en tres máquinas virtuales" width="560" height="300" loading="lazy">
+            <figcaption>La virtualización permite que un servidor físico haga el trabajo de varios.</figcaption>
+        </figure>
+        <ol class="Pasos">
+            <li><h3>Centros de datos</h3><p>Miles de servidores en edificios con energía y refrigeración redundantes, repartidos en regiones y zonas de disponibilidad.</p></li>
+            <li><h3>Virtualización</h3><p>Un hipervisor divide cada servidor físico en máquinas virtuales aisladas que se asignan a distintos clientes.</p></li>
+            <li><h3>Automatización y API</h3><p>Un panel web o una API crean recursos en minutos, sin intervención humana del lado del proveedor.</p></li>
+            <li><h3>Medición y cobro</h3><p>Cada hora de cómputo y cada gigabyte se registran y se facturan según el consumo.</p></li>
+        </ol>
+    </section>
+
+    <section id="historia" class="SeccionContenedor SeccionOscura Reveal" aria-labelledby="historia-t">
+        <h2 class="TituloSeccion" id="historia-t">Una breve historia</h2>
+        <ol class="LineaTiempo">
+            <li><span class="Anio">1961</span><h3>La idea de la computación como servicio</h3><p>John McCarthy plantea que la computación podría organizarse algún día como un servicio público, igual que la electricidad.</p></li>
+            <li><span class="Anio">1999</span><h3>Software por Internet</h3><p>Salesforce ofrece una aplicación empresarial totalmente a través del navegador: uno de los primeros SaaS.</p></li>
+            <li><span class="Anio">2006</span><h3>Nace la nube moderna</h3><p>Amazon lanza S3 y EC2: almacenamiento y servidores virtuales que se alquilan por horas.</p></li>
+            <li><span class="Anio">2008</span><h3>Llegan las plataformas</h3><p>Google presenta App Engine para ejecutar aplicaciones sin administrar servidores, y Microsoft anuncia Azure.</p></li>
+            <li><span class="Anio">2010</span><h3>Azure disponible</h3><p>Microsoft Azure queda disponible comercialmente y la competencia entre proveedores se acelera.</p></li>
+            <li><span class="Anio">2014</span><h3>Serverless</h3><p>AWS presenta Lambda y populariza las funciones que se ejecutan solo cuando ocurre un evento.</p></li>
+            <li><span class="Anio">Hoy</span><h3>Contenedores, IA y multi-cloud</h3><p>Las empresas combinan varios proveedores y usan la nube para entrenar modelos de inteligencia artificial.</p></li>
+        </ol>
+    </section>
+
+    <section id="ventajas" class="SeccionContenedor Reveal" aria-labelledby="ventajas-t">
+        <h2 class="TituloSeccion" id="ventajas-t">Ventajas y desventajas</h2>
+        <p class="DescripcionSeccion">Como toda tecnología, la nube tiene compromisos que conviene conocer antes de decidir.</p>
+        <div class="DosColumnas">
+            <div class="Columna Pro">
+                <h3>Ventajas</h3>
+                <ul>
+                    <li>Pagas solo lo que usas.</li>
+                    <li>Escalas en minutos, no en meses.</li>
+                    <li>Accedes desde cualquier lugar con Internet.</li>
+                    <li>El proveedor mantiene y actualiza la infraestructura.</li>
+                    <li>Recuperarte de un desastre es más sencillo.</li>
+                </ul>
+            </div>
+            <div class="Columna Contra">
+                <h3>Desventajas</h3>
+                <ul>
+                    <li>Dependes de tu conexión a Internet.</li>
+                    <li>Riesgo de quedar atado a un solo proveedor.</li>
+                    <li>Los costos pueden crecer si no se monitorean.</li>
+                    <li>La seguridad es una responsabilidad compartida.</li>
+                    <li>Menos control sobre la infraestructura física.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <nav class="Pager" aria-label="Navegación entre páginas"><a href="index.html" rel="prev"><small>← Anterior</small><strong>Inicio</strong></a><a class="Sig" href="servicios.html" rel="next"><small>Siguiente →</small><strong>Servicios</strong></a></nav>
+    <button id="btnSubir" class="BotonSubir" type="button" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
+
+    <footer class="CloudFooter">
+        <div class="FooterBase">
+            <p>Proverbios 16:3 "Encomienda al Señor tus obras, y tus pensamientos serán afirmados"</p>
+        </div>
+    </footer>
+</body>
+</html>

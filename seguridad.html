@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsabilidad compartida, amenazas y lista de verificación.">
+    <meta name="theme-color" content="#191e33">
+    <title>Seguridad en la nube | CloudComputing</title>
+    <link rel="icon" type="image/svg+xml" href="Imagenes/favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/comun.js" defer></script>
+</head>
+<body class="CloudBody">
+
+    <a href="#contenido" class="SaltarContenido">Saltar al contenido</a>
+
+    <header class="Cabecera">
+        <div class="CabeceraTop">
+            <a href="index.html" class="Marca" aria-label="CloudComputing, ir al inicio">
+                <img id="CloudLogo" src="Imagenes/Cloud_logo.jpg" alt="Logo de Cloud Computing" width="46" height="46">
+                <span class="NombreMarca">Cloud<span class="texto-celeste">Computing</span></span>
+            </a>
+        </div>
+        <nav class="NavPrincipal" id="menuPrincipal" aria-label="Navegación principal">
+            <ul class="ListaNav">
+                <li><a class="NavH3" href="index.html">Inicio</a></li>
+                <li><a class="NavH3" href="que-es.html">¿Qué es?</a></li>
+                <li><a class="NavH3" href="servicios.html">Servicios</a></li>
+                <li><a class="NavH3" href="despliegue.html">Despliegue</a></li>
+                <li><a class="NavH3 Activo" href="seguridad.html" aria-current="page">Seguridad</a></li>
+                <li><a class="NavH3" href="aplicaciones.html">Aplicaciones</a></li>
+                <li><a class="NavH3" href="proveedores.html">Proveedores</a></li>
+                <li><a class="NavH3" href="simulador.html">Simulador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="Migas" aria-label="Migas de pan">
+        <ol>
+            <li><a href="index.html">Inicio</a></li>
+            <li><span aria-current="page">Seguridad en la nube</span></li>
+        </ol>
+    </nav>
+    <main id="contenido">
+
+    <section class="HeroPagina">
+        <div>
+            <span class="Etiqueta">Seguridad</span>
+            <h1>Proteger lo que <span class="texto-multicolor">vive en la nube</span></h1>
+            <p class="Lead">La nube puede ser muy segura, pero solo si entiendes qué parte te corresponde proteger a ti.</p>
+            <ul class="Indice" aria-label="En esta página"><li><a href="#responsabilidad">Responsabilidad</a></li><li><a href="#pilares">Pilares</a></li><li><a href="#amenazas">Amenazas</a></li><li><a href="#checklist">Lista de verificación</a></li></ul>
+        </div>
+        <img src="Imagenes/seguridad-escudo.svg" alt="Escudo con un candado" width="420" height="320">
+    </section>
+
+    <section id="responsabilidad" class="SeccionContenedor Reveal" aria-labelledby="responsabilidad-t">
+        <h2 class="TituloSeccion" id="responsabilidad-t">Responsabilidad compartida</h2>
+        <p class="DescripcionSeccion">La seguridad en la nube se reparte entre el proveedor y el cliente. Saber dónde termina cada parte evita sorpresas.</p>
+
+        <div class="DosColumnas">
+            <div class="Columna Pro">
+                <h3>El proveedor protege <em>la nube</em></h3>
+                <ul>
+                    <li>Seguridad física de los centros de datos.</li>
+                    <li>Hardware, red y virtualización.</li>
+                    <li>Los servicios gestionados que ofrece.</li>
+                </ul>
+            </div>
+            <div class="Columna Contra">
+                <h3>Tú proteges <em>lo que pones en la nube</em></h3>
+                <ul>
+                    <li>Tus datos y su clasificación.</li>
+                    <li>Identidades, contraseñas y permisos de acceso.</li>
+                    <li>La configuración de tus servicios y aplicaciones.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="pilares" class="SeccionContenedor SeccionOscura Reveal" aria-labelledby="pilares-t">
+        <h2 class="TituloSeccion" id="pilares-t">Los cuatro pilares</h2>
+        <div class="GridDespliegue">
+            <div class="TarjetaDespliegue">
+                <h3>Control de accesos</h3>
+                <p>Permite definir quién puede ingresar a los datos, aplicaciones y recursos de la nube, reduciendo el riesgo de accesos no autorizados.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Cifrado de la información</h3>
+                <p>Protege los datos tanto cuando están almacenados como cuando viajan por Internet, evitando que personas no autorizadas puedan leerlos.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Detección de amenazas</h3>
+                <p>Monitorea actividades sospechosas como malware, phishing, accesos inusuales o intentos de ataque para responder rápidamente.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Copias de seguridad y disponibilidad</h3>
+                <p>Garantiza que la información pueda recuperarse ante errores, fallos técnicos o ataques, y que los usuarios autorizados puedan acceder a ella.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenazas" class="SeccionContenedor Reveal" aria-labelledby="amenazas-t">
+        <h2 class="TituloSeccion" id="amenazas-t">Amenazas más comunes</h2>
+        <div class="GridDespliegue">
+            <div class="TarjetaDespliegue">
+                <h3>Configuraciones incorrectas</h3>
+                <p>Un almacenamiento dejado público por error es una de las causas más frecuentes de fugas de datos.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Credenciales débiles o robadas</h3>
+                <p>Contraseñas reutilizadas o sin doble verificación permiten que alguien entre como si fuera tú.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Phishing e ingeniería social</h3>
+                <p>Correos o mensajes falsos que engañan a las personas para que entreguen sus accesos.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Malware y ransomware</h3>
+                <p>Programas que roban, dañan o cifran la información para pedir un rescate.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Fugas internas</h3>
+                <p>Permisos excesivos o errores de empleados que exponen información sensible.</p>
+            </div>
+            <div class="TarjetaDespliegue">
+                <h3>Ataques de denegación de servicio</h3>
+                <p>Tráfico masivo que busca saturar un servicio para dejarlo fuera de línea.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <nav class="Pager" aria-label="Navegación entre páginas"><a href="despliegue.html" rel="prev"><small>← Anterior</small><strong>Despliegue</strong></a><a class="Sig" href="aplicaciones.html" rel="next"><small>Siguiente →</small><strong>Aplicaciones</strong></a></nav>
+    <button id="btnSubir" class="BotonSubir" type="button" aria-label="Volver arriba" title="Volver arriba">&#8593;</button>
+
+    <footer class="CloudFooter">
+        <div class="FooterBase">
+            <p>Proverbios 16:3 "Encomienda al Señor tus obras, y tus pensamientos serán afirmados"</p>        </div>
+    </footer>
+</body>
+</html>
